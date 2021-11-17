@@ -23,7 +23,7 @@ public class Q3RecommendID {
 	
 	}
 	public static String solution(String new_id) {
-		 new_id = new_id.toLowerCase();   //모든 대문자 > 소문자
+		 new_id = new_id.toLowerCase();   //모든 대문자 > 소문자      소문자 > 대문자  .toUpperCase()
 		 
 		 new_id = new_id.replaceAll("[^a-z0-9-_.]", "");   //replace와 정규식을 활용
 	
@@ -39,15 +39,15 @@ public class Q3RecommendID {
 		 }
 		 
 		 
-		 if(new_id.length()==0) {                     // 빈문자열이면 a 주기
+		 if(new_id.length()==0) {                     // 빈문자열이면 a 주기     혹은 "^[.]"
 			 new_id = "a";			 
 		 }
 
-		 if(new_id.length()>=16) {                    // 16개 이상시 뒷부분 제거
+		 if(new_id.length()>=16) {                    // 16개 이상시 뒷부분 제거     
 			 new_id = new_id.substring(0, 15);
 		 }
 		 
-		 if (new_id.endsWith(".")) {                // 끝이 .이면 제거
+		 if (new_id.endsWith(".")) {                  // 끝이 .이면 제거     혹은 "[.]$"
 			 new_id = new_id.substring(0, new_id.length()-1);
 		 }
 		 
