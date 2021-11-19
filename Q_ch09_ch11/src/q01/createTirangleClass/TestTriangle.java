@@ -18,14 +18,22 @@ public class TestTriangle {
 		System.out.println("filled 여부를 알려주세요");
 		boolean filled = input.nextBoolean();
 		
-		GeometricObject geo = new Triangle(side1, side2, side3);
-		geo.setColor(color);
-		geo.setFilled(filled);
+		GeometricObject geo1 = new Triangle(side1, side2, side3);
+		geo1.setColor(color);
+		geo1.setFilled(filled);
 		
-		System.out.println("toString() = " + geo.toString() + ", getArea() = " + geo.getArea() +
-				", getPerimeter() = " + geo.getPerimeter() + ", getColor() = " + geo.getColor() + 
-				", isFilled() = " + geo.isFilled());
-				
+		System.out.println("toString() = " + geo1.toString() + ", getArea() = " + geo1.getArea() +
+				", getPerimeter() = " + geo1.getPerimeter() + ", getColor() = " + geo1.getColor() + 
+				", isFilled() = " + geo1.isFilled());
+		
+		GeometricObject geo2 = new Triangle();
+		geo2.setColor(color);
+		geo2.setFilled(filled);
+		
+		System.out.println("toString() = " + geo2.toString() + ", getArea() = " + geo2.getArea() +
+				", getPerimeter() = " + geo2.getPerimeter() + ", getColor() = " + geo2.getColor() + 
+				", isFilled() = " + geo2.isFilled());
+		
 	}
 
 }
