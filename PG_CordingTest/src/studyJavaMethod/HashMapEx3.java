@@ -24,7 +24,7 @@ public class HashMapEx3 {
 		
 		while(it.hasNext()) {  // 이후에 요소가 더 있는지 체크하는 메소드 boolean으로 return
 			Map.Entry e = (Map.Entry) it.next();
-			System.out.println("이름: " + e.getKey() + ", 점수" + e.getValue());
+			System.out.println("이름: " + e.getKey()+ ", 점수" + e.getValue());
 		}
 		
 		set = map.keySet();
