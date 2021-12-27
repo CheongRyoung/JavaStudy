@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utp-8">
+        <style>
+            /* CSS 주석 */
+            /*
+            기본선택자: 범위가 넓은 선택자가 적용되고, 그 다음 선택자로 덮어씌운다.
+            1. 전체 선택자(*) - 모든 elements
+            2. 태그 선택자(태그명) - 특정 elements
+        중요 3. ID 선택자(#아이디명) - 단 하나의 element, 두개 이상의 element에 사용하면 안된다. 자바스크립트에서 오류 발생
+        중요 4. class 선택자(.클래스명) - 특정 클래스 명을 가지고 있는 elements, 묶겠다.
+            */
+            /* 전체 선택자 */
+            *{
+                color:blue;
+            }
+            /* 태그 선택자(같은 속성으로 여러 태그를 적용하고 싶을 때는 li, p{} ,로 구분) */
+            li{
+                color:red;
+            }
+            p{
+                font-size: large;
+            }
+            /* 아이디 선택자 */
+            /* 절대 동일한 아이디를 가진 선택자가 서로 다른 태그에 2개 이상이면 안된다. class사용권장*/
+            #qqq111{
+                color: black;
+            }
+            #rrr333{
+                color: violet;
+            }
+            /* 클래스 선택자 (두개 이상 사용시 한칸 띄고 클래스명) */
+            .myYellowColor{
+                color: yellow;
+            }
+            .myBigFont{
+                font-size: large;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li class="myYellowColor myBigFont">안녕하세요</li>
+            <li id="qqq111" class="myBigFont">안녕하세요</li>
+            <li >안녕하세요</li>
+            <li id="rrr333">안녕하세요</li>
+        </ul>
+        <ul>
+            <li>반갑습니다.1</li>
+            <li class="myYellowColor">반갑습니다.2</li>
+            <li class="myBigFont">반갑습니다.3</li>
+            <li>반갑습니다.4</li>
+            <li>반갑습니다.5</li>
+        </ul>
+        <p>하하하하하하하하하하하하</p>
+    </body>
+</html>

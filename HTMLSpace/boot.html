@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            body > div{
+                color:green;
+                font-size: 30px;
+                border: 2px solid slategray;
+                padding: 30px;
+            }
+            /* box-model이라고 불리는 속성들(width, height, margin, padding, border)과 같이 
+            크기와 배치 관련된 속성들은 하위엘리먼트로 상속이 되지 않습니다. */
+        </style>
+    </head>
+    <body>
+        <div>
+            <span>my text is upper!</span>
+            <ul>
+                <li>
+                    <span>my text is dummy</span>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique accusamus, 
+                            corporis, dolorum fugiat tenetur porro. Aspernatur commodi, ea suscipit non? 
+                            Molestiae nulla explicabo debitis provident nostrum dolorem minima reiciendis suscipit?</p>
+                    </div>
+                </li>
+                <li></li>
+            </ul>
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>안녕하세요</title>
+    </head>
+    <body>
+        <h1>제목태그 글자 커진다...</h1>
+
+        <hr> <!-- 구분 선-->
+        <ul>
+            <li>안녕하세요</li>
+            <li>안녕하세요</li>
+            <li>안녕하세요</li>
+            <li>안녕하세요</li>
+        </ul>
+
+        <p>단락 태그...글자 내용 담을 때나 사용</p>
+
+        <!-- 절대적으로 중요한 태그 -->
+        <div>굉장히 의미 없는 태그, 의미 없어서 중요..css하고의 케미로 중요성, 레이아웃 용</div>
+        <div>굉장히 의미 없는 태그, 의미 없어서 중요..css하고의 케미로 중요성</div>
+        <span>딱히 의미 없는데 오른쪽으로 감, 특정 글자 컨트롤</span>
+        <span>딱히 의미 없는데 오른쪽으로 감..</span>
+        <br><br>  <!-- br 중요하나 최소화하자 -->
+        
+        <a href="./test.html">안녕하세요 같은 디렉토리내 해당 html을 엽니다</a>
+        <a href="../test.html">안녕하세요 이전 디렉토리내 해당 html을 엽니다</a>
+        <a href="http://www.naver.com">안녕하세요 강력한 상대경로</a>
+          <!-- 상대경로 "./test.html" 현재위치 => ./ 같은 디렉토리내 파일을 찾아서 오픈
+                (../ 이전 디렉토리내 파일을 찾아서 오픈, 이전의 이전은 ../../)
+                절대경로 "test.html" => /가 있는데 백엔드 후에 다시...
+                (http://....)
+            -->
+        <!-- 이미지 태그(단일)-->
+        <br>
+        <img src="https://file.mk.co.kr/meet/neds/2021/12/image_readtop_2021_1207624_16405611584896464.jpg" title="이미지설명"><br>
+        <img src="https://file.mk.co.kr/meet/neds/2021/12/image_readtop_2021_1207624_16405611584896464.jpg" width="300" height="300"><br>
+        <img src="이미지" alt="이미지없음">    
+        <a href="http://www.naver.com"><img src="이미지" alt="이미지없음"></a>
+
+        <!-- table <table>, <thead>, <tr>, <td>, <tbody>, <th> 등-->
+        <table>
+            <thead>
+                <tr>
+                    <th>이름</th>
+                    <td>나이</td>
+                    <td>점수</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>트레이서</td>
+                    <td>24</td>
+                    <td>77</td>
+                </tr>
+                <tr>
+                    <td>한조</td>
+                    <td>22</td>
+                    <td>89</td>
+                </tr>
+            </tbody>    
+        </table>
+
+        <!-- 중요: 입력 양식 <input> 단일 -->
+        ID : <input type="text" placeholder="아이디를 입력하세요"> <br>
+        PW : <input type="password"> <br>
+        색상입력하세요 : <input type="color"><br>
+        생년월일:<input type="date"><br>
+        취미: 농구<input type="checkbox">축구<input type="checkbox">배구<input type="checkbox">야구<input type="checkbox"><br>
+        성별: 남<input type="radio" name="gender" checked> 여<input type="radio"  name="gender"><br>    <!-- name 속성으로 그룹핑, checked 기본체크값-->
+        지역: <select>                               <!-- 선택 종류가 많다고 생각했을 때, radio보다 더 낳을 수 있다.-->
+            <option>서울</option>                    <!--selected 속성을 넣으면 기본값이 된다.-->
+            <option selected>대구</option>
+            <option>부산</option>
+            <option>광주</option>
+        </select> <br>
+        사진등록: <input type="file" accept="image/*" multiple><br> <!-- accept로 파일확장자 지정, mutiple로 다중선택-->
+        제목: <input type="text"><br>         <!--제목 같은 경우는 한줄만 가능하게-->
+        내용: <textarea rows="10"></textarea><br>       <!--텍스트를 여러줄 입력하고 싶을 때, 크기 조절 창이지만 css를 통해서 크기를 만들수 있다.-->
+        ID: <input type="email">
+        <a href="http://www.naver.com"><input type="button" value="버튼입니다."></a>
+        <button>버튼입니다.</button>
+    </body>
+</html>
