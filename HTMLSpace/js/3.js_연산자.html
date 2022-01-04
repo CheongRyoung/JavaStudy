@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script>
+            //연산자....
+            //산술연산자.. + - / * 
+            var a = 10;
+            var b = 20;
+            var result = a+b;
+            console.log(result);
+
+            var a = 5;
+            var b = 2;
+            var result = a/b;
+            console.log(result);
+            var result = parseInt(a/b); // 정수 나누기..
+            console.log(result);
+            var result = a%b; // 나머지 연산
+            console.log(result);
+
+            //비교연산자
+            // == 같냐?? === 타입까지 같냐??
+            var a = "1";
+            var b = 1;
+            if(a === b){
+                console.log("같다");
+            } else {
+                console.log("다르다");
+            }
+
+            // 타입 확인하는 API
+            var a = 10;
+            var test = typeof a; // typeof 변수명; 메모리 타입 조사해서 문자로 리턴
+            console.log(test);
+
+            var a = 10;
+            var b = 20;
+            if(a > b){
+                console.log("크다");
+            } else {
+                console.log("작다");
+            }
+
+            //논리 연산자 &&, || ..
+            var a = 10;
+            if( a>5 && a<20) {
+                console.log("a는 5보다 크고 20보다 작다.");
+            } else{
+                console.log("아녀")
+            }
+            
+            //문자열 연산 +
+            var a = "안녕하세요" + 1234;
+            console.log(a);
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

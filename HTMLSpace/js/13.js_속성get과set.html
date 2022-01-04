@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script>
+            //Dom.... Attribute...속성컨트롤 
+            //get 태그에 적용된 속성 가져오기. set 태그에 속성 넣기(핵심)
+            function test1(){
+                var e = document.getElementById("x1");
+                e.getAttribute(test= "x1");
+                e.setAttribute("class", "redColor bigFont")
+            }
+            function test2(){
+                var e = document.getElementById("x1");
+                var value = e.getAttribute("class");
+                alert(value);
+            }
+        </script>
+    </head>
+    <body>
+        <div id="x1" test="test">안녕하세요</div>
+        <button onclick="test1()">테스트1</button>
+        <button onclick="test2()">테스트2</button>
+    </body>
+</html>

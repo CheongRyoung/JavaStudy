@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script>
+            // 함수선언
+            // 이벤트를 연결할 때 이 코드가 실행되도록, 어떻게 연결시킬것인가?
+            function test1(a,b,c){
+                //... 
+                console.log("클릭됨!!");
+            }
+
+            function test2(){
+                console.log("test2 호출됨...")
+            }
+            function test3(){
+                console.log("test3 호출됨...")
+            }
+            
+            //호출
+            var aaa = test2; // test2를 호출하는게 아니라, 함수 주소를 aaa에 대입
+            aaa();
+            test2();
+            aaa = test3;
+            aaa();
+
+            // 익명의 함수...
+            var ttt = function test4(){
+                console.log("gggggg")
+            };
+            ttt();
+
+            function test10(){
+                console.log("test10이 호출됨");
+            }
+
+            // some 다른 사람이 만든 api 내부가 이렇게 되어 있다라는 가정...
+            function some(aaa){
+                console.log("some호출됨")
+                aaa();
+            }
+            
+            // 콜백 함수 - 내가 만들었지만 내가 호출하진 않음...
+            // 나는 다른 함수를 호출했는데 그 함수에서 내 함수를 호출하는 경우
+            some(test10); // 개념적으로 test10은 콜백 함수가 된다.
+            some(function (){
+                console.log("익명함수 호출됨...!!")
+            });
+        </script>
+        <style>
+            #x1{
+                width: 100px;
+                height: 100px;
+                background-color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="x1" onclick="test1(1,2,3)" onmouseover="test2()">안녕하세요</div>
+    </body>
+</html>

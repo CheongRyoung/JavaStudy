@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script>
+            // 선언
+            function test1(){
+                console.log("test1 호출됨")
+            }
+            // 호출
+            test1();
+            test1();
+            test1();
+
+            function test2(a, b){
+                if(b == undefined) {
+                    console.log("야 값넣어")
+                }
+                console.log("test2 호출됨 : " + a + " : " + b);
+            }
+
+            test2(1, 2);
+            test2("안녕하세요", 17);
+            test2(13); // null(주소값이 없음)과 undefined(정의되지 않음)는 다르다.
+
+            function test3(){ //리턴 타입이 정해지지 않았다.
+                return 13;
+            }
+            var value = test3();
+            console.log(value);
+
+            var value = test1(); //리턴을 안했는데 값을 받을 수 있다.
+            console.log(value);  //단, 리턴 값이 정의되지 않아서 undefined를 나타냄
+
+            function test4(a){
+                if(a > 10) {
+                    return "안녕하세요";
+                }
+            }
+            var result = test4(30);
+            console.log(result);
+            var result = test4(5);
+            console.log(result);
+
+            // 신경써야될 것..
+            var aaa = test3; // 함수를 담는 다.
+            console.log(aaa());
+            
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

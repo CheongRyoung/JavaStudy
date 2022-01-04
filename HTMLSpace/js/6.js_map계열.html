@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script>
+            // object와 map
+            // JSON = {}
+
+            var st1 = {}; //비어 있는 object 또는 map
+            var st1 = {    // 이걸 더 자주씀
+                score : 77,
+                name : "한조",
+                age : 15,
+            };
+
+            st1.name ="트레이서";
+            console.log(st1.score);
+            console.log(st1.name);
+            console.log(st1.age);
+
+            //MAP의 형태로 써보자 키와 값
+            var map1 = {};
+            map1["score"] = 40; //put
+            console.log(map1["score"]);
+
+            // 에라 모르겠다.. 섞을 수도 있지만 그러지 말자
+            // 문법이 나눠져 있지만 사실상 같다.
+            var some = {
+                a:10,
+                b:10,
+            };
+            console.log(some.a);
+            console.log(some["a"]);
+
+            some.c = 30; // some에 c가 없어도 만들수 있다.
+            console.log(some.c);
+            console.log(some["c"]);
+
+            some["d"] = 40;
+            console.log(some.d);
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

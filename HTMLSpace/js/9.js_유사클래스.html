@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script>
+            setTimeout(function (){
+                console.log("안녕하세요");
+                console.log("반갑습니다..");
+                setTimeout(function (){
+                    console.log("하하하하");
+                }, 3000);
+            } , 5000);
+            
+            // es6 - class 문법 존재.... es5는 없음, 개념적으로 객체는 존재
+            var st1 = {
+                score : 30,
+                name : "한조",
+            }
+            function student(){
+                console.log("111");
+            }
+            student(); //함수 호출
+            new student(); // 새로운 메모리를 생성해서... 메모리의 참조주소를 리턴함...함수호출
+
+            function Student(score, name){
+                //필드 선언....
+                this.name = name;
+                this.score = score;
+
+                this.study = function(){
+                    console.log(this.name + "가 공부를 합니다");                }
+            }
+            var b1 = new Student(50, "한조");
+            b1.study();
+            
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
