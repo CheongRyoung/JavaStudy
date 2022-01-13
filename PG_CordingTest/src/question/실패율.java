@@ -7,27 +7,42 @@ import java.util.Map.Entry;
 
 public class 실패율 {
     public int[] solution(int N, int[] stages) {
-    	Map<Integer, Double> map = new HashMap<Integer, Double>();
+    	ArrayList<Stage> arr = new ArrayList<>();
     	for(int i=1; i<=N; i++) {
-    		int clears = 0;
-    		int noClears =0;
+    		int fail = 0;
+    		int clear =0;
     		for (int j=0; j<stages.length; j++) {
-    			if (i < stages[j]) {
-    				clears++;
-    			} else if( i==stages[j]) {
-    				noClears++;
+    			if (i == stages[j]) {
+    				fail++;
+    			} else if( i <= stages[j]) {
+    				clear++;
     			}
     		}
-    		map.put(i, (double) (noClears/clears));
+    		if(fail == 0 ) {
+    			arr.add(new Stage(i, 0));
+    		} else if (clear == 0 ) {
+    			arr.add(new Stage(i, 1));
+    		} else {
+    			arr.add(new Stage(i, (double) fail/clear));
+    		}
     	}
-    	int[] answer = new int[map.size()];
-    	List<Entry<Integer, Double>> list = new ArrayList<>(map.entrySet());
-		list.sort(Entry.comparingByValue());
-		int j = 0;
-		for (int i : map.keySet()) {
-			answer[j] = i;
-			j++;
-		}
+    	Collections.sort(arr, ((o1, o2) -> Double.compare(o2.fail, o1.fail)));
+    	int[] answer = new int[N];
+        for (int i=0; i<arr.size(); i++) {
+            answer[i] = arr.get(i).stage;
+        }
+    	
         return answer;
     }
+}
+
+class Stage {
+	public int stage;
+	public double fail;
+	
+	public Stage(int stage, double fail) {
+		this.stage = stage;
+		this.fail = fail;
+	}
+
 }
