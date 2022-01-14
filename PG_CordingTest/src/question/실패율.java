@@ -19,9 +19,7 @@ public class 실패율 {
     			}
     		}
     		if(fail == 0 ) {
-    			arr.add(new Stage(i, 0));
-    		} else if (clear == 0 ) {
-    			arr.add(new Stage(i, 1));
+    			arr.add(new Stage(i, (double) fail));
     		} else {
     			arr.add(new Stage(i, (double) fail/clear));
     		}
